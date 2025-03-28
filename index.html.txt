@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compassion Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">Compassion Academy</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with 3D Canvas -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Compassion Academy</h1>
+            <p>Where Excellence Meets Compassion</p>
+            <button class="cta-btn">Discover More</button>
+        </div>
+        <div id="threejs-canvas"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Compassion Academy is dedicated to nurturing young minds with a blend of academic rigor and emotional intelligence, creating leaders of tomorrow.</p>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <h2>Our Programs</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <h3>Science & Innovation</h3>
+                <p>Explore the wonders of science with hands-on learning.</p>
+            </div>
+            <div class="course-card">
+                <h3>Arts & Culture</h3>
+                <p>Unleash creativity through diverse artistic pursuits.</p>
+            </div>
+            <div class="course-card">
+                <h3>Leadership & Ethics</h3>
+                <p>Build character and skills for a compassionate future.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <p>Email: info@compassionacademy.com | Phone: +91 12345 67890</p>
+        <button class="cta-btn">Contact Us</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Compassion Academy. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
