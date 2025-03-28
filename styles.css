@@ -9,6 +9,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
+    overflow-x: hidden;
 }
 
 /* Navbar */
@@ -22,12 +23,18 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
     color: #fff;
     font-size: 1.5rem;
     font-weight: 600;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .nav-links {
@@ -43,11 +50,28 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: 400;
-    transition: color 0.3s;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 .nav-links a:hover {
     color: #3498db;
+    transform: translateY(-3px);
 }
 
 /* Hero Section */
@@ -63,9 +87,16 @@ body {
     color: #fff;
 }
 
+.hero-content {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
@@ -79,11 +110,12 @@ body {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .cta-button:hover {
-    background: #2980b9;
+    transform: translateZ(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* General Section */
@@ -96,6 +128,18 @@ body {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #2c3e50;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #3498db;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* About Section */
@@ -111,6 +155,11 @@ body {
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.stat:hover {
+    transform: translateY(-10px) rotateX(10deg);
 }
 
 .stat span {
@@ -129,16 +178,43 @@ body {
 }
 
 .course-card {
-    background: #fff;
     width: 300px;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    perspective: 1000px;
 }
 
-.course-card:hover {
-    transform: translateY(-10px);
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.course-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.card-front {
+    z-index: 2;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .course-card img {
@@ -154,17 +230,16 @@ body {
 }
 
 .course-btn {
-    display: inline-block;
     padding: 0.5rem 1rem;
     background: #3498db;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 1rem;
+    transition: transform 0.3s;
 }
 
 .course-btn:hover {
-    background: #2980b9;
+    transform: scale(1.1);
 }
 
 /* Contact Section */
@@ -174,6 +249,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form input,
@@ -182,6 +261,13 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
+    transition: transform 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    transform: scale(1.02);
+    border-color: #3498db;
 }
 
 .contact-form textarea {
@@ -195,11 +281,12 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .submit-btn:hover {
-    background: #34495e;
+    transform: translateZ(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
@@ -214,10 +301,11 @@ body {
     color: #3498db;
     text-decoration: none;
     margin: 0 0.5rem;
+    transition: transform 0.3s;
 }
 
 .social-links a:hover {
-    color: #2980b9;
+    transform: translateY(-5px);
 }
 
 /* Responsive Design */
@@ -245,5 +333,9 @@ body {
 
     .about-stats {
         flex-direction: column;
+    }
+
+    .course-card {
+        width: 100%;
     }
 }
