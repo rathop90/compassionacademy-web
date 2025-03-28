@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compassion Academy</title>
+    <title>Compassion Academy - Empowering Minds</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="nav-brand">Compassion Academy</div>
+        <div class="logo">Compassion Academy</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -19,56 +19,70 @@
         </ul>
     </nav>
 
-    <!-- Hero Section with 3D Canvas -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Compassion Academy</h1>
-            <p>Where Excellence Meets Compassion</p>
-            <button class="cta-btn">Discover More</button>
+            <h1>Welcome to Compassion Academy</h1>
+            <p>Empowering minds with knowledge, compassion, and innovation.</p>
+            <a href="#courses" class="cta-button">Explore Courses</a>
         </div>
-        <div id="threejs-canvas"></div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="section">
         <h2>About Us</h2>
-        <p>Compassion Academy is dedicated to nurturing young minds with a blend of academic rigor and emotional intelligence, creating leaders of tomorrow.</p>
+        <p>Compassion Academy is dedicated to providing top-tier education with a focus on holistic development. Our mission is to inspire, educate, and empower individuals to reach their full potential.</p>
+        <div class="about-stats">
+            <div class="stat"><span>10+</span> Years of Excellence</div>
+            <div class="stat"><span>5000+</span> Students Empowered</div>
+            <div class="stat"><span>50+</span> Expert Instructors</div>
+        </div>
     </section>
 
     <!-- Courses Section -->
-    <section id="courses" class="courses">
-        <h2>Our Programs</h2>
-        <div class="course-grid">
+    <section id="courses" class="section">
+        <h2>Our Courses</h2>
+        <div class="course-carousel">
             <div class="course-card">
-                <h3>Science & Innovation</h3>
-                <p>Explore the wonders of science with hands-on learning.</p>
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Master HTML, CSS, and JS to build stunning websites.</p>
+                <a href="#" class="course-btn">Learn More</a>
             </div>
             <div class="course-card">
-                <h3>Arts & Culture</h3>
-                <p>Unleash creativity through diverse artistic pursuits.</p>
+                <img src="https://images.unsplash.com/photo-1551288049-b5f3c2e9ef0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Data Science">
+                <h3>Data Science</h3>
+                <p>Dive into data analysis, ML, and visualization.</p>
+                <a href="#" class="course-btn">Learn More</a>
             </div>
             <div class="course-card">
-                <h3>Leadership & Ethics</h3>
-                <p>Build character and skills for a compassionate future.</p>
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Digital Marketing">
+                <h3>Digital Marketing</h3>
+                <p>Learn SEO, SEM, and social media strategies.</p>
+                <a href="#" class="course-btn">Learn More</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
-        <p>Email: info@compassionacademy.com | Phone: +91 12345 67890</p>
-        <button class="cta-btn">Contact Us</button>
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <p>© 2025 Compassion Academy. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+        </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
