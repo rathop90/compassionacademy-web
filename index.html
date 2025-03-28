@@ -6,6 +6,8 @@
     <title>Compassion Academy - Empowering Minds</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Tilt.js CDN for 3D tilt effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -21,7 +23,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div class="hero-content" data-tilt data-tilt-max="20" data-tilt-speed="400" data-tilt-perspective="500">
             <h1>Welcome to Compassion Academy</h1>
             <p>Empowering minds with knowledge, compassion, and innovation.</p>
             <a href="#courses" class="cta-button">Explore Courses</a>
@@ -44,22 +46,43 @@
         <h2>Our Courses</h2>
         <div class="course-carousel">
             <div class="course-card">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Web Development">
-                <h3>Web Development</h3>
-                <p>Master HTML, CSS, and JS to build stunning websites.</p>
-                <a href="#" class="course-btn">Learn More</a>
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Web Development">
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Web Development</h3>
+                        <p>Master HTML, CSS, and JS to build stunning websites.</p>
+                        <a href="#" class="course-btn">Learn More</a>
+                    </div>
+                </div>
             </div>
             <div class="course-card">
-                <img src="https://images.unsplash.com/photo-1551288049-b5f3c2e9ef0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Data Science">
-                <h3>Data Science</h3>
-                <p>Dive into data analysis, ML, and visualization.</p>
-                <a href="#" class="course-btn">Learn More</a>
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://images.unsplash.com/photo-1551288049-b5f3c2e9ef0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Data Science">
+                        <h3>Data Science</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Data Science</h3>
+                        <p>Dive into data analysis, ML, and visualization.</p>
+                        <a href="#" class="course-btn">Learn More</a>
+                    </div>
+                </div>
             </div>
             <div class="course-card">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Digital Marketing">
-                <h3>Digital Marketing</h3>
-                <p>Learn SEO, SEM, and social media strategies.</p>
-                <a href="#" class="course-btn">Learn More</a>
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Digital Marketing">
+                        <h3>Digital Marketing</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Digital Marketing</h3>
+                        <p>Learn SEO, SEM, and social media strategies.</p>
+                        <a href="#" class="course-btn">Learn More</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -67,7 +90,7 @@
     <!-- Contact Section -->
     <section id="contact" class="section">
         <h2>Contact Us</h2>
-        <form class="contact-form">
+        <form class="contact-form" data-tilt data-tilt-max="10" data-tilt-speed="200" data-tilt-perspective="300">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <textarea placeholder="Your Message" required></textarea>
